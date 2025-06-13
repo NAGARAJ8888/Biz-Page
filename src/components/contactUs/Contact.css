@@ -1,0 +1,16 @@
+@media (max-width: 800px) {
+    .contact-flex {
+      flex-direction: column !important;
+      align-items: center;
+    }
+    .contact-item {
+      border-right: none !important;  /* Remove right border in vertical layout */
+      width: 100%;
+      max-width: 400px; /* Optional: restrict the maximum width */
+      margin-bottom: 20px;
+    }
+    .contact-item:last-child {
+      margin-bottom: 0;
+    }
+  }
+  

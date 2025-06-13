@@ -1,0 +1,15 @@
+.heading-with-underline::after {
+    content: "";
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #18d26e;
+    bottom: 0;
+    left: calc(50% - 20px);
+}
+.card-header {
+    width: 100%; /* Ensures full width */
+    text-align: center; /* Optional for centering */
+  }
+  

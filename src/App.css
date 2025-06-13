@@ -1,0 +1,7 @@
+@media (max-width: 1000px) {
+    .card-container {
+      flex-direction: column !important;
+      align-items: center; /* Centers cards in column mode */
+    }
+  }
+  
