@@ -1,102 +1,21 @@
-.carousel {
-  position: relative; /* Change from absolute */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh; /* Full screen */
+/* Navbar Responsive Adjustments */
+.navbar-nav .nav-link {
+  font-size: 15px;
+  transition: color 0.3s ease;
 }
 
-.carousel-inner,
-.carousel-item {
-  width: 100%;
-  height: 100vh; /* Full screen */
+.navbar-nav .nav-link:hover {
+  color: #ffc107;
 }
 
-.carousel-container {
-  position: relative;
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2); /* Fixed shadow */
-}
-
-.dark-theme-img {
-  filter: brightness(50%) contrast(120%) grayscale(1%);
-  width: 100%;
-  height: auto;
-}
-
-.navbar-nav .nav-item:hover .nav-link {
-  color: rgb(10, 247, 10) !important;
-  transition: color 0.3s ease-in-out;
-}
-
-.carousel-item img {
-  width: 100%;
-  height: 100vh;
-  object-fit: cover; /* Ensures the image fills the screen */
-}
-
-.centered-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  width: 100%;
-}
-
-.animated-text {
-  opacity: 0;
-  transform: translateY(-50px);
-  animation: slideDown 1s ease-out forwards;
-  font-weight: bold;
-  font-size: 2rem;
-  color: white;
-}
-
-@keyframes slideDown {
-  from {
-      opacity: 0;
-      transform: translateY(-50px);
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 1rem;
   }
-  to {
-      opacity: 1;
-      transform: translateY(0);
+
+  .navbar-nav .nav-link {
+    font-size: 16px;
+    padding: 0.5rem 1rem;
   }
 }
-
-/* Fix for elements below carousel */
-.content-below {
-  margin-top: 100vh; /* Push content below carousel */
-}
-.navbar {
-  position: absolute; /* Keep navbar above carousel */
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: transparent; /* Ensure transparency */
-  z-index: 1000; /* Make sure it stays on top */
-}
-
-.navbar-dark .navbar-nav .nav-link {
-  color: white !important; /* Ensure text remains visible */
-}
-
-.navbar-nav .nav-item:hover .nav-link {
-  color: rgb(10, 247, 10) !important;
-  transition: color 0.3s ease-in-out;
-}
-
-.custom-border {
-  position: relative;
-  padding-left: 15px; /* space for the pseudo-element */
-}
-
-.custom-border::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  height: 50%; /* Adjust this value to control the border length */
-  border-left: 3px solid rgb(11, 248, 63); /* Customize thickness and color */
-}
-
